@@ -16,7 +16,6 @@
             {
                 url += '?';
                 hasQueryParam = true;
-            }
             else
             {
                 url += '&';
@@ -25,3 +24,4 @@
         }
     }
 }
+// maybe this services should be in Helper/ Shared/ Utils services

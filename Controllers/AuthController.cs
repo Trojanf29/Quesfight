@@ -14,6 +14,12 @@ namespace QuesFight.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
+
+        // should not inject repo in controller layer,
+        // CONTROLLER => SERVICE =< REPOSITORY
+        // CONTROLLER: ONLY HANDLE REST API (GET, POST, PUT, PATCH, DELETE)
+        // SERVICE: HANDLING BUSINESS
+        // REPOSITORY: HANDLING DATA FROM DATABASE (INSERT, UPDATE, DELETE, QUERY,...)
         private readonly UserRepo _userRepo;
 
         public AuthController(UserRepo userRepo)
